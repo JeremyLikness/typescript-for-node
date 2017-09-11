@@ -1,0 +1,23 @@
+{
+    "name": "typescript-node-examples",
+    "version": "1.0.0",
+    "description": "A hands-on demonstration of TypeScript",
+    "main": "index.js",
+    "scripts": {
+      "tsc": "tsc",
+      "tsc:w": "tsc --watch",
+      "tsc:es6": "tsc --project tsconfig.es6.json",
+      "start": "npm run tsc:w",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "typescript",
+      "javascript"
+    ],
+    "author": "Jeremy Likness",
+    "license": "MIT",
+    "homepage": "https://blog.jeremylikness.com/",
+    "dependencies": {
+      "typescript": "^2.5"
+    }
+  }

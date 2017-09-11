@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es5"
+    },
+    "files": [
+        "index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
