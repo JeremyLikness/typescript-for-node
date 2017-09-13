@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>TypeScript for Node.js</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -21,15 +21,21 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+
+	<style>
+		.left { text-align: left; }
+	</style>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
+
 			<section>
 				<h1>TypeScript for Node.Js</h1>
 				"Tame your JavaScript"
 			</section>
+
 			<section>
 				<img src="./images/profile1_sm.jpg" style="float: right; width: 120px; height: 120px; border-radius: 120px;" />
 				<h2>Jeremy Likness</h2>
@@ -41,21 +47,99 @@
 					<li>100% plant-based diet and CrossFit</li>
 				</ul>
 			</section>
+
+			<section>
+				<h2>Wat?!</h2>
+				<code>
+							<pre id="wat-text"></pre>
+						</code>
+				<button id="wat-button">Wat?</button>
+				<code>
+							<pre id="wat-result">...</pre>
+						</code>
+			</section>
+
+			<section>
+				<h2>Evolution</h2>
+				<img style="border: none;" src="./images/evolution.png" />
+			</section>
+
+			<section>
+				<h2>Harmony? ECMAScript 2015? Babel?</h2>
+				<p class="left">Popular options.</p>
+				<p class="left">Includes: classes, lexical scope, lambda...</p>
+				<p class="left">Lacks &hellip;</p>
+				<ul>
+					<li>Interfaces</li>
+					<li>Dynamic module affinity (System.js, Require.js, etc.)</li>
+					<li>External library definitions</li>
+					<li>Generics</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: red">Discovery</h3>
+					<p>Intent is clearer with types and interfaces.</p>
+				</section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: orange">Documentation</h3>
+					<p>Libraries make it easier to discover and learn how to use APIs.</p>
+				</section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: green">Development Time Security</h3>
+					<p>Less "fat-finger", catch bugs earlier in the cycle.</p>
+				</section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: blue">Scope Safety</h3>
+					<p>Modules, Classes, and Lambdas take care of this.</p>
+				</section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: indigo">Team Scale</h3>
+					<p>Easier for multiple teams and members to work in parallel.</p>
+				</section>
+				<section>
+					<h2>Real World</h2>
+					<h3 style="color: violet">Increased Velocity</h3>
+					<p>Team had 4x velocity with TypeScript vs. just JavaScript. Oh, and <strong>the Angular team uses it, for goodness' sake!</strong></p>
+				</section>
+			</section>
+
+			<section>
+				<h2>Demo Time!</h2>
+				<img style="border: none;" src="./images/demo.png"/>
+			</section>
+
 		</div>
 	</div>
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
+	<script src="js/wat.js"></script>
 
 	<script>
 		// More info about config & dependencies:
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide',
+
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
 				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
 			]
 		});
