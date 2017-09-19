@@ -20,7 +20,7 @@ The `Examples` folder contains a simple project to illustrate various TypeScript
 
 This is a very simple project to show basic setup for Node.js development.
 
-`npm run-script` to build it.
+`npm run-script build` to build it.
 
 `node lib/main` to run it. You should see some colorful cats.
 
