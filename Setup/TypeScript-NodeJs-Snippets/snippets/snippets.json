@@ -1,0 +1,122 @@
+{
+	"TypeScript for NodeJs Common": {
+		"prefix": "TypeScript-NodeJs-01-Common",
+		"body": [
+			"export interface INamed {",
+			"   name: string;",
+			"}"
+		],
+		"description": "TypeScript for NodeJs Common Snippet"
+	},
+	"TypeScript for NodeJs Animal Class": {
+		"prefix": "TypeScript-NodeJs-02-Animal-Class",
+		"body": [
+			"import { INamed } from './common';",
+			"",
+			"export class Animal implements INamed {",
+			"   constructor(public name: string) {",
+			"",
+			"   }",
+			"}"
+		],
+		"description": "TypeScript for NodeJs Animal Class Snippet"
+	},
+	"TypeScript for NodeJs Animal Collection": {
+		"prefix": "TypeScript-NodeJs-03-Animal-Collection",
+		"body": [
+			"export class Animals extends Array<Animal> {",
+			"   constructor() {",
+			"      super();",
+			"      ['Lynx', 'Jaguar', 'Panther', 'Leopard', 'Tiger', 'Lion'].forEach(name => {",
+			"         this.push(new Animal(name));",
+			"      });",
+			"   }",
+			"}"
+		],
+		"description": "TypeScript for NodeJs Animal Collection Snippet"
+	},
+	"TypeScript for NodeJs Color": {
+		"prefix": "TypeScript-NodeJs-04-Color",
+		"body": [
+			"import { INamed } from './common';",
+			"",
+			"export class Color implements INamed {",
+			"   constructor(public name: string) {",
+			"",
+			"   }",
+			"}",
+			"",
+			"export class Colors extends Array<Color> {",
+			"   constructor(){",
+			"      super();[",
+			"         'Red',",
+			"         'Orange',",
+			"         'Yellow',",
+			"         'Green',",
+			"         'Blue',",
+			"         'Indigo',",
+			"         'Violet'",
+			"      ].forEach(",
+			"         color => this.push(new Color(color)));",
+			"   }",
+			"}"
+		],
+		"description": "TypeScript for NodeJs Color Snippet"
+	},
+	"TypeScript for NodeJs Thing": {
+		"prefix": "TypeScript-NodeJs-05-Thing",
+		"body": [
+			"import { INamed } from './common';",
+			"import { Animal } from './animal';",
+			"import { Color } from './color';",
+			"",
+			"export class Thing implements INamed {",
+			"   private _animal: Animal;",
+			"   private _color: Color;",
+			"",
+			"   public get animal(): Animal {",
+			"      return this._animal;",
+			"   }",
+			"",
+			"   public get color(): Color {",
+			"      return this._color;",
+			"   }",
+			"",
+			"   public get name(): string {",
+			"      return `${this._color.name} ${this._animal.name}`;",
+			"   }",
+			"",
+			"   constructor(color: Color, animal: Animal) {",
+			"      this._animal = animal;",
+			"      this._color = color;",
+			"   }",
+			"}",
+			"",
+			"function pickOne<T>(list: Array<T>): T {",
+			"   var idx = Math.floor(Math.random() * list.length);",
+			"   return list[idx];",
+			"}",
+			"",
+			"export var makeThing = (colorList: Array<Color>, animalList: Array<Animal>) => {",
+			"   return new Thing(pickOne(colorList), pickOne(animalList));",
+			"};"
+		],
+		"description": "TypeScript for NodeJs Thing Snippet"
+	},
+	"TypeScript for NodeJs Main": {
+		"prefix": "TypeScript-NodeJs-06-Main",
+		"body": [
+			"import { Animals } from './animal';",
+			"import { Colors } from './color';",
+			"import { Thing, makeThing } from './thing';",
+			"",
+			"var colors = new Colors();",
+			"var animals = new Animals();",
+			"",
+			"[1,2,3,4,5].forEach(item => {",
+			"   console.log(makeThing(colors, animals).name);",
+			"});"
+		],
+		"description": "TypeScript for NodeJs Main Snippet"
+	}
+}

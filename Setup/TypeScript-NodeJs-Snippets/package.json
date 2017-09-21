@@ -1,0 +1,21 @@
+{
+	"name": "typescript-nodejs-snippets",
+	"displayName": "TypeScript for Node.js - Code Snippets",
+	"description": "Code snippets for the TypeScript for Node.js demo",
+	"version": "1.0.0",
+	"publisher": "Jeremy Likness",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}

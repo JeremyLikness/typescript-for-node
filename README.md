@@ -25,3 +25,12 @@ This is a very simple project to show basic setup for Node.js development.
 `node lib/main` to run it. You should see some colorful cats.
 
 [@JeremyLikness](https://twitter.com/JeremyLikness)
+
+## Snippets to build yourself 
+
+Copy the **TypeScript-NodeJs-Snippets** folder and paste it into the Visual Studio Code Extensions folder to install the JavaScript snippets for this demo. Depending on your platform it is located:
+
+* **Windows**: `%USERPROFILE%\.vscode\extensions`
+* **Mac**: `$HOME/.vscode/extensions`
+* **Linux**: `$HOME/.vscode/extensions`
+
