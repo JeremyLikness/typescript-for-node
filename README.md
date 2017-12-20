@@ -2,6 +2,8 @@
 
 This project contains the presentation and sample code for my "TypeScript for Node.js" session at [Connect.Tech](https://connect-js.com).
 
+> To get full details, including a related video walk through and description of the presentation, read the [TypeScript for Node.js](https://jlik.me/cec) blog post.
+
 [Run the Presentation](./TypeScriptNode/typescriptfornode.html) or [view it as a PDF](./Presentation.pdf).
 
 ## Examples
